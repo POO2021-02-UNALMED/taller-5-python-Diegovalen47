@@ -18,7 +18,7 @@ def testTotalTipo():
     Ave.crearHalcon("test", 11, "M")
     Ave.crearHalcon("test", 11, "M")
     ok = False
-    comp = "Mamiferos : 3\nAves : 2\nReptiles : 1\nPeces : 1\nAnfibios : 2"
+    comp = "Mamiferos : 7\nAves : 7\nReptiles : 4\nPeces : 4\nAnfibios : 5"
     print(comp.replace('\n', ''))
     print(Animal.totalPorTipo().replace('\n', ''))
     if Animal.totalPorTipo().replace('\n', '') == comp.replace('\n', ''):

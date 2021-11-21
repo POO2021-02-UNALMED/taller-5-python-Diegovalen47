@@ -1,8 +1,4 @@
-from zooAnimales.anfibio import Anfibio
-from zooAnimales.ave import Ave
-from zooAnimales.mamifero import Mamifero
-from zooAnimales.pez import Pez
-from zooAnimales.reptil import Reptil
+
 
 
 class Animal:
@@ -14,7 +10,7 @@ class Animal:
         self._edad = edad
         self._habitat = habitat
         self._genero = genero
-        self.zona = None
+        self._zona = None
         Animal._totalAnimales += 1
 
     def movimiento(self):
@@ -22,11 +18,16 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        return "Mamiferos: " + str(len(Mamifero.getListado())) +\
-               "\nAves: " + str(len(Ave.getListado())) + \
-               "\nReptiles: " + str(len(Reptil.getListado())) + \
-               "\nPeces: " + str(len(Pez.getListado())) + \
-               "\nAnfibios: " + str(len(Anfibio.getListado()))
+        from zooAnimales.anfibio import Anfibio
+        from zooAnimales.ave import Ave
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.pez import Pez
+        from zooAnimales.reptil import Reptil
+        return "Mamiferos : " + str(Mamifero.caballos + Mamifero.leones) +\
+               "\nAves : " + str(len(Ave.getListado())) + \
+               "\nReptiles : " + str(len(Reptil.getListado())) + \
+               "\nPeces : " + str(len(Pez.getListado())) + \
+               "\nAnfibios : " + str(len(Anfibio.getListado()))
 
     def toString(self):
         if self._zona != None :
